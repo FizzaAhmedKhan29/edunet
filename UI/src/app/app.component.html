@@ -1,0 +1,17 @@
+<h1>Low Light Image Enhancement</h1>
+<p-fileUpload
+  styleClass="uploader"
+  mode="advanced"
+  [showCancelButton]="true"
+  name="demo[]"
+  accept="image/*"
+  [customUpload]="true"
+  (uploadHandler)="onBasicUpload($event)"
+  (onUpload)="onBasicUpload($event)"
+  [auto]="true"
+  chooseLabel="Upload Photo"
+  (onRemove)="clear()"
+></p-fileUpload>
+<div style="text-align: center;">
+<img *ngIf="url" [src]="url" height="500px" width="500px" />
+&nbsp;<img *ngIf="thumbnail" [src]="thumbnail" height="500px" width="500px" /></div>
